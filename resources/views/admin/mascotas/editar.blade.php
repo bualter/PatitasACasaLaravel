@@ -13,7 +13,7 @@
                     <form method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                          {{ method_field('put') }}
-
+ 
                         <div class="row">
 
                           @include('admin.mascotas._form')
