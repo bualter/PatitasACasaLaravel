@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Mascotas;
+use App\Mascota;
 
 class Front extends Controller
 {

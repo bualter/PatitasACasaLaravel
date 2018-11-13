@@ -30,3 +30,22 @@ Route::post('/admin/mascotas/nuevo', 'AdminMascotas@crear');
 Route::get('/admin/mascotas/{mascota}/editar', 'AdminMascotas@editar')->name('editar-mascota');
 Route::put('/admin/mascotas/{mascota}/editar', 'AdminMascotas@guardar');
 Route::delete('/admin/mascotas/{mascota}/eliminar', 'AdminMascotas@eliminar')->name('eliminar-mascota');
+
+Route::get('/', 'Front@home');
+Route::get('/mascotas/{mascota}', 'Front@verMascota')->name('ver-mascota');
+
+Route::get('/mascotas-todas', function () {
+    return view('mascotas-todas');
+});
+
+Route::get('/perros', function () {
+    return view('perros');
+});
+
+Route::get('/gatos', function () {
+    return view('gatos');
+});
+
+Route::get('/otros', function () {
+    return view('otros');
+});
