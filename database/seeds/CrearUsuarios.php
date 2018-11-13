@@ -15,6 +15,8 @@ class CrearUsuarios extends Seeder
         DB::table('users')->insert([
           'email'=> 'jose_herrera97@icloud.com',
           'name'=> 'Jose',
+          'lastname' => 'Herrera',
+          'zonaPertenencia' => 'Palermo',
           'password'=> bcrypt('root'),
           'remember_token'=> str_random(60)
         ]);

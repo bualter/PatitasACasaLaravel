@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                  <h1> Mis Mascotas </h2>
+                  <h2> Mis Mascotas </h2>
                 </div>
 
                 <div class="card-body">
