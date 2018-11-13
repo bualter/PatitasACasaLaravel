@@ -10,9 +10,17 @@
 
 <div class="col-md-12 form-group">
   <label>Nombre</label>
-  <input type="text" name="nombre" class="form-control" value="
-  {{ old('nombre', $mascota->nombre) }}">
+  <input type="text" name="nombre" class="form-control" value="{{ old('nombre', $mascota->nombre) }}">
 </div>
+
+<div class="col-md-12 form-group">
+  <label>Foto</label>
+  @if($mascota->foto)
+    <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" width="100%">
+  @endif
+  <input type="file" name="foto" class="form-control">
+</div>
+
 <div class="col-md-12 form-group">
   <label> Tipo </label>
   <input type="text" name="tipo" class="form-control" value="{{ old('tipo', $mascota->tipo) }}">

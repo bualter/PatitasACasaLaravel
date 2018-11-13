@@ -34,6 +34,7 @@ class AdminMascotas extends Controller
         $request,
           [
             'nombre' => 'required',
+            'foto' => 'nullable|image',
             'tipo' => 'required',
             'edad' => 'required',
             'tamanio' => 'required',
@@ -48,14 +49,15 @@ class AdminMascotas extends Controller
       $usuario = Auth::user(); /*se la subo al usuario logueado*/
       $usuario->mascotas()->save($mascota);
 
-/*      $foto = $request->file('foto');
-      if($foto) {
-        $nombre = $post->id . '.' . $foto->extension();
-        $foto->storeAs('public/posts/fotos', $nombre);
-        $post->foto = $nombre; //'/storage/...  ->   /storage/public/...'
-        $post->save();
+      $foto = $request->file('foto');
+      if($foto){
+        $nombre = $mascota->id.'.'.$foto->extension();
+        $foto->storeAs('public/mascotas/fotos',$nombre);
+        $mascota->foto = $nombre;
+        $mascota->save();
       }
-*/
+
+
 return redirect()->route('lista-mascotas');
 }
 
@@ -70,6 +72,7 @@ public function guardar(Mascota $mascota, Request $request)
         $request,
         [
           'nombre' => 'required',
+          'foto' => 'nullable|image',
           'tipo' => 'required',
           'edad' => 'required',
           'tamanio' => 'required',
@@ -80,6 +83,13 @@ public function guardar(Mascota $mascota, Request $request)
     );
 
     $mascota->fill($request->all());
+
+    $foto = $request->file('foto');
+    if($foto){
+      $nombre = $mascota->id.'.'.$foto->extension();
+      $foto->storeAs('public/mascotas/fotos',$nombre);
+      $mascota->foto = $nombre;
+    }
 
     $mascota->save();
 
