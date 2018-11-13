@@ -10,6 +10,16 @@
                 </div>
 
                 <div class="card-body">
+
+
+                <div class="row">
+                  <div class="col-md-12 text-right">
+                    <a href="{{ route('nuevo-mascota') }}" class="btn btn-primary">Subir mascota</a>
+                  </div>
+                </div>
+
+                  <hr>
+
                   <div class="table-responsive">
                     <table class="table table-striped table-hover">
                       <tr>
