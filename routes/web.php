@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin/home', 'HomeController@index')->name('home');
+//Route::get('/admin/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
@@ -34,10 +34,20 @@ Route::delete('/admin/mascotas/{mascota}/eliminar', 'AdminMascotas@eliminar')->n
 Route::get('/', 'Front@home');
 Route::get('/mascotas/{mascota}', 'Front@verMascota')->name('ver-mascota');
 
+Route::get('/mascotas-todas', 'AdminMascotas@listarTodas');
+Route::get('/perros', 'AdminMascotas@listarPerros');
+Route::get('/gatos', 'AdminMascotas@listarGatos');
+Route::get('/otros', 'AdminMascotas@listarOtros');
+
+Route::get('/preguntas', function () {
+    return view('preguntasFrecuentes');
+});
+
+/*
+
 Route::get('/mascotas-todas', function () {
     return view('mascotas-todas');
 });
-
 Route::get('/perros', function () {
     return view('perros');
 });
@@ -49,3 +59,4 @@ Route::get('/gatos', function () {
 Route::get('/otros', function () {
     return view('otros');
 });
+*/

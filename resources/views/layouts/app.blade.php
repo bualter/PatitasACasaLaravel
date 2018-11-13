@@ -34,7 +34,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                       @auth
-                          <li><a href="{{ route('home') }}">Home</a></li>
                           <li><a href="{{ route('lista-mascotas') }}">Mis mascotas</a></li>
                       @endauth
                     </ul>
