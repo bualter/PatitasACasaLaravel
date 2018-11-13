@@ -7,9 +7,11 @@
     <div class="lista-mascotas">
       @foreach ($mascotas as $mascota)
         <div class="mascota">
-        <!--Foto mascota-->
-          <div class="nombreMascota">
+          <div class="imagenMascota">
             {{$mascota->nombre}}
+          </div>
+          <div class="imageMascota">
+            <img src="{{ asset($mascota->image) }}" />
           </div>
           <div class="tipoMascota">
             {{$mascota->tipo}}

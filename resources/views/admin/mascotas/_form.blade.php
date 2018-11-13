@@ -14,14 +14,6 @@
 </div>
 
 <div class="col-md-12 form-group">
-  <label>Foto</label>
-  @if($mascota->foto)
-    <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" width="100%">
-  @endif
-  <input type="file" name="foto" class="form-control">
-</div>
-
-<div class="col-md-12 form-group">
   <label> Tipo </label>
   <input type="text" name="tipo" class="form-control" value="{{ old('tipo', $mascota->tipo) }}">
 </div>
@@ -45,6 +37,15 @@
   <label> Descripción </label>
   <textarea name="descripcion" class="form-control"> {{ old('descripcion', $mascota->descripcion) }} </textarea>
 </div>
+
+<div class="col-md-12 form-group">
+  <label>Foto</label>
+  @if($mascota->foto)
+    <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" width="100%">
+  @endif
+  <input type="file" name="foto" class="form-control">
+</div>
+
 <div class="col-md-12 form-group">
   <button type="submit" class="btn btn-primary">Publicar</button>
   <a href="{{route('lista-mascotas')}}" class="btn btn-info">Volver al perfil</a>
