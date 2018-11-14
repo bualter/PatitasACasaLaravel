@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="container">
+  <section class="mascotas-todas">
 
         <div class="col-md-12">
           <div class="titulo-mascotas">
@@ -31,11 +31,14 @@
                 <div class="edadMascota">{{ $mascota->zona }}</div>
               </div>
               <div class="descripcionMascota">{{ $mascota->descripcion }}</div>
+              <div class="contactoMascota">
+                Contacto: {{$mascota->duenio->email}}
+              </div>
 
             </div>
           @endforeach
 
         </div>
-      </div>
+      </section>
 
 @endsection

@@ -31,6 +31,9 @@
               <div class="edadMascota">{{ $mascota->zona }}</div>
             </div>
             <div class="descripcionMascota">{{ $mascota->descripcion }}</div>
+            <div class="contactoMascota">
+              Contacto: {{$mascota->duenio->email}}
+            </div>
 
           </div>
         @endforeach

@@ -27,7 +27,7 @@
             <li><a href="/register">REGISTRARME</a></li>
             <li><a href="/login">LOG IN</a></li>
             @else
-              <li><a href="{{route('lista-mascotas')}}"> {{Auth::user()->name}} <!--{$user->name}}--></a></li>
+              <li><a href="/perfil"> {{Auth::user()->name}}</a></li>
             @endguest
           </ul>
         </nav>

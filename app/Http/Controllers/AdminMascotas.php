@@ -129,9 +129,19 @@ public function listarGatos()
   public function listarOtros()
   {
     $otros = Mascota::where('tipo','otro')->get();
-
     return view('otros', compact('otros'));
   }
 
+  public function verMascota($id)
+  {
+    $mascota = Mascota::where('id','$id')->get();
+    return view('mascota')->with(compact('mascota'));
+  }
+
+  public function verPerfil()
+  {
+    $usuario = Auth::user();
+    return view('perfil');
+  }
 
 }

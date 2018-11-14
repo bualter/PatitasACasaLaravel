@@ -43,6 +43,14 @@ Route::get('/preguntas', function () {
     return view('preguntasFrecuentes');
 });
 
+
+Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
+
+Route::get('/perfil', 'AdminMascotas@verPerfil');
+
+
+
+
 /*
 
 Route::get('/mascotas-todas', function () {

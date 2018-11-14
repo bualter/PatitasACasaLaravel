@@ -3,7 +3,13 @@
 @section('mascotasSubidas')
 
   <section class="mascotas">
-    <h3> Algunas Mascotas</h3>
+
+    <div class="col-md-12">
+      <div class="titulo-mascotas">
+        <h2> Algunas mascotas </h2>
+      </div>
+    </div>
+
     <div class="lista-mascotas">
       @foreach ($mascotas as $mascota)
         <div class="mascota">
@@ -32,7 +38,7 @@
           <div class="contactoMascota">
             Contacto: {{$mascota->duenio->email}}
           </div>
-          <a href="{{ route('ver-mascota', compact('mascota')) }}" class="btn btn-primary">Ver mascota</a>
+          <li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>
         </div>
         <br>
 
