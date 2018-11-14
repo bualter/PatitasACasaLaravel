@@ -37,15 +37,10 @@
                             <td>{{ $mascota->sexo }}</td>
                             <td>{{ $mascota->zona }}</td>
                             <td>{{ $mascota->descripcion }}</td>
-                            <td class="text-right">
-                              <form method="post" action="{{ route('eliminar-mascota', compact('mascota')) }}">
-                                {{ csrf_field() }}
-                                {{ method_field('delete') }}
-                                <a href="{{ route('editar-mascota', compact('mascota')) }}" class="btn btn-sm btn-warning">Editar</a>
-                                <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                              </form>
-                            <td>
-
+                            <td> @if($mascota->foto)
+                                    <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
+                                  @endif
+                            </td>
 
                           </tr>
                         @endforeach
