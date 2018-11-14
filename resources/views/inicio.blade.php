@@ -10,8 +10,11 @@
           <div class="imagenMascota">
             {{$mascota->nombre}}
           </div>
+
           <div class="imageMascota">
-            <img src="{{ asset($mascota->image) }}" />
+              @if($mascota->foto)
+                 <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
+              @endif
           </div>
           <div class="tipoMascota">
             {{$mascota->tipo}}
