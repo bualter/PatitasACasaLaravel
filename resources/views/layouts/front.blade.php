@@ -17,10 +17,11 @@
         <nav class="main-nav">
           <ul id="header-ul">
             <li><a href="/">INICIO</ion-icon></a></li> <!--Cambiar a index.php-->
-            <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
             <li><a href="/perros">ADOPTAR UN PERRO</a></li>
             <li><a href="/gatos">ADOPTAR UN GATO</a></li>
             <li><a href="/otros">ADOPTAR OTRO ANIMAL</a></li>
+            <li><a href="/mascotas-todas">VER TODOS</a></li>
+            <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
 
             @guest
             <li><a href="/register">REGISTRARME</a></li>

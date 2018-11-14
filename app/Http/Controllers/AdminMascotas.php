@@ -107,7 +107,7 @@ public function eliminar(Mascota $mascota)
   public function listarTodas()
   {
     $mascotas = Mascota::all();
-    
+
     return view('mascotas-todas', compact('mascotas'));
   }
 
@@ -115,22 +115,22 @@ public function eliminar(Mascota $mascota)
   public function listarPerros()
   {
     $perros = Mascota::where('tipo','perro')->get();
-    
-    return view('perros', compact('perros'));  
+
+    return view('perros', compact('perros'));
   }
 
 public function listarGatos()
   {
     $gatos = Mascota::where('tipo','gato')->get();
-    
-    return view('gatos', compact('gatos'));     
+
+    return view('gatos', compact('gatos'));
   }
 
   public function listarOtros()
   {
-     $otros = Mascota::where('tipo','otro')->get();
-    
-    return view('otros', compact('otros'));       
+    $otros = Mascota::where('tipo','otro')->get();
+
+    return view('otros', compact('otros'));
   }
 
 

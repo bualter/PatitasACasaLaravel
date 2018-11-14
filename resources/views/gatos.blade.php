@@ -1,57 +1,40 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                  <h2> Perritos </h2>
-                </div>
+  <div class="container">
 
-                <div class="card-body">
-
-
-
-                  <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                      <tr>
-                        <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Tipo</th>
-                        <th>Edad</th>
-                        <th>Tamanio</th>
-                        <th>Sexo</th>
-                        <th>Zona</th>
-                        <th>Descripcion</th>
-                        <th></th>
-                        </tr>
-                        @foreach($gatos as $mascota)
-                          <tr>
-
-                            <td>{{ $mascota->id }}</td>
-                            <td>{{ $mascota->nombre }}</td>
-                            <td>{{ $mascota->tipo }}</td>
-                            <td>{{ $mascota->edad }}</td>
-                            <td>{{ $mascota->tamanio }}</td>
-                            <td>{{ $mascota->sexo }}</td>
-                            <td>{{ $mascota->zona }}</td>
-                            <td>{{ $mascota->descripcion }}</td>
-                            <td> @if($mascota->foto)
-                                    <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
-                                  @endif
-                            </td>
-
-                          </tr>
-                        @endforeach
-
-                    </table>
- 
-                  </div>
-
-                </div>
-            </div>
+        <div class="col-md-12">
+          <div class="titulo-mascotas">
+            <h2> Perritos </h2>
+          </div>
         </div>
-    </div>
-</div>
+
+        <div class="lista-mascotas">
+
+          @foreach($gatos as $mascota)
+
+            <div class="mascota">
+
+              <div class="imageMascota">
+                @if($mascota->foto)
+              <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
+                @endif
+              </div>
+              <div class="nombreMascota">{{ $mascota->nombre }}</div>
+              <div class="tipoMascota">{{ $mascota->tipo }}</div>
+              <div class="datosMascota">
+                <div class="edadMascota">{{ $mascota->edad }}</div>
+                <div lass="edadMascota">{{ $mascota->tamanio }}</div>
+              </div>
+              <div class="datosMascota">
+                <div class="edadMascota">{{ $mascota->sexo }}</div>
+                <div class="edadMascota">{{ $mascota->zona }}</div>
+              </div>
+              <div class="descripcionMascota">{{ $mascota->descripcion }}</div>
+
+            </div>
+          @endforeach
+
+        </div>
+      </div>
 @endsection

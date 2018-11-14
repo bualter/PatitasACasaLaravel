@@ -7,14 +7,13 @@
     <div class="lista-mascotas">
       @foreach ($mascotas as $mascota)
         <div class="mascota">
-          <div class="imagenMascota">
-            {{$mascota->nombre}}
-          </div>
-
           <div class="imageMascota">
               @if($mascota->foto)
                  <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
               @endif
+          </div>
+          <div class="nombreMascota">
+            {{$mascota->nombre}}
           </div>
           <div class="tipoMascota">
             {{$mascota->tipo}}
