@@ -136,10 +136,14 @@ body {
   font-weight: 600;
 }
 
+.dropbtn2:hover, .dropbtn2:focus {
+   color: #2f4d7d;
+}
+
 
 
 .dropbtn:hover, .dropbtn:focus {
-   color: #4A72B0;
+   color: #2f4d7d;
 }
 
 .dropdown {
@@ -365,6 +369,8 @@ img {vertical-align: middle;}
   border-radius: 50px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .datosMascota {
   display: flex;
