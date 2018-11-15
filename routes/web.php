@@ -49,6 +49,15 @@ Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
 Route::get('/perfil', 'AdminMascotas@verPerfil');
 
 
+Route::get('/footer', function () {
+   return View::make('footer-comun');
+});
+
+Route::get('/header', function () {
+   return View::make('header-comun');
+});
+
+
 
 
 /*

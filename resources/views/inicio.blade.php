@@ -38,7 +38,7 @@
           <div class="contactoMascota">
             Contacto: {{$mascota->duenio->email}}
           </div>
-          <li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>
+          <!--<li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>-->
         </div>
         <br>
 

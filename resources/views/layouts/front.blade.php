@@ -4,44 +4,140 @@
     <meta charset="utf-8">
     <title> Patitas a Casa</title>
     <link rel="icon" type="image/svg" href="images/fork.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet"> <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Leckerli+One|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
   </head>
   <body>
   <div class="contenedor-general">
-    <div class ="mi-header">
-    <div class="container-fluid">
-      <header class="main-header">
-        <div class="header-top">
-            <img src="img/logo.png" alt="logotipo" class="logo" width="200px" class="img-responsive">
-        </div>
-        <nav class="main-nav">
-          <ul id="header-ul">
-            <li><a href="/">INICIO</ion-icon></a></li> <!--Cambiar a index.php-->
-            <li><a href="/perros">ADOPTAR UN PERRO</a></li>
-            <li><a href="/gatos">ADOPTAR UN GATO</a></li>
-            <li><a href="/otros">ADOPTAR OTRO ANIMAL</a></li>
-            <li><a href="/mascotas-todas">VER TODOS</a></li>
-            <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
 
-            @guest
-            <li><a href="/register">REGISTRARME</a></li>
-            <li><a href="/login">LOG IN</a></li>
-            @else
-              <li><a href="/perfil"> {{Auth::user()->name}}</a></li>
-            @endguest
-          </ul>
-        </nav>
-      </header>
+
+    <section class ="mi-header">
+      <div class="container-fluid">
+        <header class="main-header">
+          <div class="header-top">
+            <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="300px" class="img-responsive">
+          </div>
+          <nav class="main-nav">
+            <ul id="header-ul">
+              <li><a href="/">INICIO</ion-icon></a></li> <!--Cambiar a index.php-->
+              <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
+              <li><a href="/perros">ADOPTAR UN PERRO</a></li>
+              <li><a href="/gatos">ADOPTAR UN GATO</a></li>
+              <li><a href="/otros">ADOPTAR OTRO ANIMAL</a></li>
+
+              @guest
+                <li><a href="/register">REGISTRARME</a></li>
+                <li><a href="/login">LOG IN</a></li>
+              @else
+
+
+
+                <li>
+                  <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        {{ Auth::user()->name }}
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+
+                      <a href="/perfil" class="w3-bar-item w3-button" id="w3button">
+                        Mi Perfil
+                      </a>
+                      <a
+                      @auth
+                       href="{{ route('lista-mascotas') }}"> Mis mascotas
+                      @endauth
+                      </a>
+                      <a  href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Cerrar sesión') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                  </div>
+                </li>
+              @endguest
+            </ul>
+
+
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+          </nav>
+
+        </header>
+      </div>
+    </section>
+
+<div id="break">
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="/storage/front/foto1.jpg" style="width:100%">
     </div>
-  </div>
 
-<div class="carrusel">
-CARRUSEL
-</div>
+    <div class="mySlides fade">
+        <img src="/storage/front/foto10.jpg" style="width:100%">
+    </div>
 
-<div class="carrusel">
-FORMULARIO BUSQUEDA
-</div>
+    <div class="mySlides fade">
+        <img src="/storage/front/foto12.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/storage/front/foto4.jpg" style="width:100%">
+    </div>
+
+
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="break2">
+      <div class="raza">
+        <div class="fraseRaza">
+        NO COMPRES DE RAZA, ¡ADOPTA UNO SIN CASA! <br> ♥
+       </div>
+      </div>
+    </div>
+      </div>
+
+<!--     <div id="break">
+        <div class="break1">
+          <img src="/storage/front/foto4.jpg" >
+        </div>
+       <div class="break1">
+          <img src="/storage/front/foto1.jpg" >
+        </div>
+        <div class="break1">
+          <img src="/storage/front/foto5.png" >
+        </div>
+        <div class="break2">
+          <div class="raza">
+            <div class="fraseRaza">
+            NO COMPRES DE RAZA, ¡ADOPTA UNO SIN CASA! <br> ♥
+           </div>
+          </div>
+        </div>
+    </div> -->
 
   @yield('mascotasSubidas')
 
@@ -49,24 +145,12 @@ FORMULARIO BUSQUEDA
     <div class ="container-fluid">
       <footer class="main-footer" >
         <div class="container">
-          <div class= "footer1">
-            <form action= "script.php" method="post">
-            <div class="row">
-              <div class= "col-12 col-s-12 col-md-12 col-lg-5">
-                <label id="label-footer" for="email-input"> ¡NO TE PIERDAS NUESTRAS NOTICIAS! </label>
-              </div>
 
-              <div class= "col-12 col-s-12 col-md-12 col-lg-4">
-                <input type="email" placeholder="E-mail" name="correo">
-              </div>
-                <div class= "col-12 col-s-12 col-md-12 col-lg-3">
-                  <button type="button" class="btn btn-warning" class="suscribe-btn">
-                    <a href="mailto:jose_herrera97@icloud.com"> SUSCRIBIRME </a>
-                  </button>
-                </div>
-              </div>
-            </form>
+          <div class= "footer1">
+          <div class="patitasFrase">
+            Hacé de la adopción tu única opción
           </div>
+
 
           <div class="container" id="footer-icons">
             <a href= "https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" class="fb-icon"></ion-icon></a> fb
@@ -82,6 +166,52 @@ FORMULARIO BUSQUEDA
     </footer>
   </div>
   </div>
+
+ <!--USUARIO BOTON-->
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2100); // Change image every 2 seconds
+}
+</script>
+
   </body>
 </html>
 

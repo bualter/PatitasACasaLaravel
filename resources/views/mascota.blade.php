@@ -1,1 +1,2 @@
-ver la mascota 
+
+Datos de mascota
