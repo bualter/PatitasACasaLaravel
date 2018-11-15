@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet">
   </head>
   <body>
   <div class="contenedor-general">
@@ -31,8 +31,9 @@
               <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
 
               @guest
-                <li><a href="/register">REGISTRARME</a></li>
-                <li><a href="/login">LOG IN</a></li>
+
+                <li><a href="/login">   <button class="dropbtn"> LOG IN </button></a></li>
+                <li><a href="/register"><button class="dropbtn2">REGISTRARME</button></a></li>
               @else
 
 

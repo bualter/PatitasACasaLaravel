@@ -24,7 +24,7 @@
           </div>
           <nav class="main-nav">
             <ul id="header-ul">
-              <li><a href="/">INICIO</ion-icon></a></li> <!--Cambiar a index.php-->
+              <li><a href="/">INICIO</a></li> <!--Cambiar a index.php-->
               <li><a href="/perros">ADOPTAR UN PERRO</a></li>
               <li><a href="/gatos">ADOPTAR UN GATO</a></li>
               <li><a href="/otros">ADOPTAR OTRO ANIMAL</a></li>
