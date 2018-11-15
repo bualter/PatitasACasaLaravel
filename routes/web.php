@@ -31,7 +31,7 @@ Route::get('/admin/mascotas/{mascota}/editar', 'AdminMascotas@editar')->name('ed
 Route::put('/admin/mascotas/{mascota}/editar', 'AdminMascotas@guardar');
 Route::delete('/admin/mascotas/{mascota}/eliminar', 'AdminMascotas@eliminar')->name('eliminar-mascota');
 
-Route::get('/', 'Front@home');
+Route::get('/', 'Front@home')->name('inicio');;
 Route::get('/mascotas/{mascota}', 'Front@verMascota')->name('ver-mascota');
 
 Route::get('/mascotas-todas', 'AdminMascotas@listarTodas');
@@ -43,7 +43,7 @@ Route::get('/preguntas', function () {
     return view('preguntasFrecuentes');
 });
 
-Route::get('/admin', 'HomeController@cosasDeAdmin');
+Route::get('/admin', 'HomeController@cosasDeAdmin')->middleware('auth', 'role:admin');
 
 Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
 
