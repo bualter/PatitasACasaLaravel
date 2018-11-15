@@ -4,10 +4,12 @@
 
   <section class="mascotas">
 
-    <div class="col-md-12">
+    <div>
+      <div id="mascotastitleDiv">
       <div class="titulo-mascotas">
-        <h2> Algunas mascotas </h2>
+        <h2> Mascotas en adopción </h2>
       </div>
+    </div>
     </div>
 
     <div class="lista-mascotas">
@@ -36,7 +38,8 @@
               {{$mascota->descripcion}}
           </div>
           <div class="contactoMascota">
-            Contacto: {{$mascota->duenio->email}}
+            Contacto: {{$mascota->duenio->name}}
+            <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top"> ¡Adoptar! </a>
           </div>
           <!--<li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>-->
         </div>

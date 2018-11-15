@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Mi perfil</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet"> <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Leckerli+One|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
+  </head>
+  <body>
+  <div class="contenedor-general">
 <section class ="mi-header">
   <div class="container-fluid">
     <header class="main-header">
@@ -16,19 +30,9 @@
             <li><a href="/register">REGISTRARME</a></li>
             <li><a href="/login">LOG IN</a></li>
           @else
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/perfil"> Mi perfil </a>
-                  <a
-                  @auth
-                   href="{{ route('lista-mascotas') }}"> Mis mascotas
-                  @endauth
-                  </a>
-                  <a class="dropdown-item" href="{{ route('logout') }}"
+            <li>
+              <button class="dropbtn2">
+                  <a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                         {{ __('Cerrar sesión') }}
@@ -37,7 +41,7 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                </div>
+                </button>
             </li>
           @endguest
         </ul>
@@ -132,3 +136,27 @@
     </div>
   </footer>
 </div>
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</div>
+</body>
+</html>
