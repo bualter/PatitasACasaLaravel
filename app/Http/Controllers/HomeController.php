@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function cosasDeAdmin(Request $request)
     {
-        $request->user()->authorizeRoles(‘admin’);
+        $request->user()->authorizeRoles('admin');
         return view('admin');
     }
 

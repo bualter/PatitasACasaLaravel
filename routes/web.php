@@ -43,6 +43,7 @@ Route::get('/preguntas', function () {
     return view('preguntasFrecuentes');
 });
 
+Route::get('/admin', 'HomeController@cosasDeAdmin');
 
 Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
 
