@@ -34,7 +34,12 @@ class User extends Authenticatable
     		return $this->hasMany(Mascota::class, 'id_user');
     	}
 
-
+    public function roles()
+    {
+        return $this
+            ->belongsToMany('App\Role')
+            ->withTimestamps();
+    }
 
 
 }

@@ -5,7 +5,7 @@
 
         <div class="col-md-12">
           <div class="titulo-mascotas">
-            <h2> Perritos </h2>
+            <h2> Gatitos </h2>
           </div>
         </div>
 
