@@ -136,7 +136,31 @@
 
 
 <!-- yield footer-->
+<div clas="mi-footer" id="mi-footer">
+  <div class ="container-fluid">
+    <footer class="main-footer" >
+      <div class="container">
 
+        <div class= "footer1">
+        <div class="patitasFrase">
+          ♥ Hacé de la adopción tu única opción ♥
+        </div>
+
+
+<!--        <div class="container" id="footer-icons">
+          <a href= "https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" class="fb-icon"></ion-icon></a> fb
+          <a href= "https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram" class="insta-icon"></ion-icon></a> insta
+          <a href= "https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter" class="twitter-icon"></ion-icon></a> twitter
+        </div>-->
+
+        <div class="footer-last">
+          <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="250px" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
 
 <!--USUARIO BOTON-->
 <script>
