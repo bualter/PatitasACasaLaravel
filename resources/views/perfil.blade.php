@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet">
   </head>
   <body>
   <div class="contenedor-general">
@@ -18,15 +18,15 @@
   <div class="container-fluid">
     <header class="main-header">
       <div class="header-top">
-        <img src="img/logo.png" alt="logotipo" class="logo" width="200px" class="img-responsive">
+      <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="250px" class="img-responsive">
       </div>
       <nav class="main-nav">
         <ul id="header-ul">
           <li><a href="/">INICIO</ion-icon></a></li> <!--Cambiar a index.php-->
-          <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
           <li><a href="/perros">ADOPTAR UN PERRO</a></li>
           <li><a href="/gatos">ADOPTAR UN GATO</a></li>
           <li><a href="/otros">ADOPTAR OTRO ANIMAL</a></li>
+          <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
 
           @guest
             <li><a href="/register">REGISTRARME</a></li>
@@ -52,13 +52,15 @@
   </div>
 </section>
 
+
+
 <div class="containerPerfil">
- <h2>¡BIENVENIDO A TU PERFIL!</h2>
+ <h2 class="mascotasUsuario3">¡BIENVENIDO A TU PERFIL!</h2>
 
  <div class="perfilUsuario">
 
    <div class="imgUser">
-       <img src="/storage/users/fotos/darth.png"> <!--FALTA IMG DE USUARIO EN DB-->
+       <img src="/storage/users/fotos/boba.jpg"> <!--FALTA IMG DE USUARIO EN DB-->
    </div>
 <div class="userDB">
    <div class="nombreUsuario">
@@ -70,7 +72,7 @@
      {{Auth::user()->email}}
    </div>
    <div class="mailUsuario">
-     {{Auth::user()->zonaPertenencia}}
+     Zona: {{Auth::user()->zonaPertenencia}}
    </div>
 </div>
 
@@ -125,7 +127,7 @@
           </form>
         </div>
 -->
-        <div class="container" id="footer-icons">
+<!--        <div class="container" id="footer-icons">
           <a href= "https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" class="fb-icon"></ion-icon></a> fb
           <a href= "https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram" class="insta-icon"></ion-icon></a> insta
           <a href= "https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter" class="twitter-icon"></ion-icon></a> twitter
@@ -138,7 +140,7 @@
     </div>
   </footer>
 </div>
-
+-->
 <script>
 
 function myFunction() {
