@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: 0.5px;
+  background-color: rgb(225, 235, 251);
 }
 
 .contenedor-general {
@@ -118,6 +119,19 @@ body {
    width: 150px;
 }
 
+.dropbtn2 {
+  background-color: #e64d48;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 50px;
+  border-style: hidden;
+  cursor: pointer;
+  width: 150px;
+}
 
 .dropbtn:hover, .dropbtn:focus {
    color: #4A72B0;
@@ -181,10 +195,11 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  z-index:-1;
 }
 
 .raza {
-  width: 400px;
+  width: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,12 +213,11 @@ body {
 .fraseRaza {
   color: #ffffff;
   font-family: 'Asap', sans-serif;
-  font-size: 2.3em;
-  letter-spacing: 0.1em;
-  line-height: 1em;
+  font-size: 2.4em;
+  letter-spacing: 0.08em;
   font-weight: 500;
-  line-height: 50px;
-
+  line-height: 1.3em;
+  margin-top: 50px;
 }
 
 .mySlides {display: none;}
@@ -215,6 +229,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   margin-bottom: 0px;
+  z-index:-3;
 }
 
 
@@ -259,5 +274,40 @@ img {vertical-align: middle;}
 
 .logo {
   margin: 10px;
+}
+
+.lista-mascotas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#mascotastitleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-mascotas {
+  width: 400px;
+  background-color:#4A72B0;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 /*CARRUSEL*

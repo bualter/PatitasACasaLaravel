@@ -19,15 +19,15 @@
       <div class="container-fluid">
         <header class="main-header">
           <div class="header-top">
-            <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="300px" class="img-responsive">
+            <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="250px" class="img-responsive">
           </div>
           <nav class="main-nav">
             <ul id="header-ul">
               <li><a href="/">INICIO</ion-icon></a></li> <!--Cambiar a index.php-->
-              <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
               <li><a href="/perros">ADOPTAR UN PERRO</a></li>
               <li><a href="/gatos">ADOPTAR UN GATO</a></li>
               <li><a href="/otros">ADOPTAR OTRO ANIMAL</a></li>
+              <li><a href="/preguntas">PREGUNTAS FRECUENTES</a></li>
 
               @guest
                 <li><a href="/register">REGISTRARME</a></li>
@@ -102,9 +102,9 @@
 
 
     </div>
-    <br>
 
-    <div style="text-align:center">
+
+    <div style="text-align:center" style="margin-top: 0">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
@@ -208,7 +208,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2100); // Change image every 2 seconds
+    setTimeout(showSlides, 2300); // Change image every 2 seconds
 }
 </script>
 
