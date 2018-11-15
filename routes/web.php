@@ -43,8 +43,6 @@ Route::get('/preguntas', function () {
     return view('preguntasFrecuentes');
 });
 
-Route::get('/admin', 'HomeController@cosasDeAdmin')->middleware('auth', 'role:admin');
-
 Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
 
 Route::get('/perfil', 'AdminMascotas@verPerfil');
@@ -58,23 +56,7 @@ Route::get('/header', function () {
    return View::make('header-comun');
 });
 
+Route::get('/admin', 'adminUsuarios@listarTodos')->middleware('auth', 'role:admin')->name('lista-usuarios');;
 
+Route::delete('/admin/usuarios/{usuario}/eliminar', 'adminUsuarios@eliminar')->name('eliminar-usuario');
 
-
-/*
-
-Route::get('/mascotas-todas', function () {
-    return view('mascotas-todas');
-});
-Route::get('/perros', function () {
-    return view('perros');
-});
-
-Route::get('/gatos', function () {
-    return view('gatos');
-});
-
-Route::get('/otros', function () {
-    return view('otros');
-});
-*/
