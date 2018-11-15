@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet"> 
   </head>
   <body>
   <div class="contenedor-general">
