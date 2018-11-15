@@ -29,7 +29,7 @@ class AdminMascotas extends Controller
 
 
   public function crear(Request $request)
-    {
+  {
       $this->validate(
         $request,
           [
@@ -58,17 +58,17 @@ class AdminMascotas extends Controller
       }
 
 
-return redirect()->route('lista-mascotas');
-}
+    return redirect()->route('lista-mascotas');
+  }
 
-public function editar(Mascota $mascota)
-{
-    return view('admin.mascotas.editar', compact('mascota'));
-}
+  public function editar(Mascota $mascota)
+  {
+      return view('admin.mascotas.editar', compact('mascota'));
+  }
 
-public function guardar(Mascota $mascota, Request $request)
-{
-    $this->validate(
+  public function guardar(Mascota $mascota, Request $request)
+  {
+      $this->validate(
         $request,
         [
           'nombre' => 'required',
@@ -94,13 +94,13 @@ public function guardar(Mascota $mascota, Request $request)
     $mascota->save();
 
     return redirect()->route('lista-mascotas');
-}
+  }
 
-public function eliminar(Mascota $mascota)
-{
-    $mascota->delete();
-    return redirect()->route('lista-mascotas');
-}
+  public function eliminar(Mascota $mascota)
+  {
+      $mascota->delete();
+      return redirect()->route('lista-mascotas');
+  }
 
 
 
@@ -119,7 +119,7 @@ public function eliminar(Mascota $mascota)
     return view('perros', compact('perros'));
   }
 
-public function listarGatos()
+  public function listarGatos()
   {
     $gatos = Mascota::where('tipo','gato')->get();
 
