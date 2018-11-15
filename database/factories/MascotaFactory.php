@@ -5,7 +5,7 @@ use App\Mascota;
 
 $factory->define(App\Mascota::class, function (Faker $faker) {
 
-	$tipoCollection = collect(['perro','gato']);
+	$tipoCollection = collect(['perro','gato','otro']);
 	$sexoCollection = collect(['M','F']);
 	$tamanioCollection = collect(['Chico','Mediano', 'Grande']);
 	$zonaCollection = collect(['Sur','Oeste', 'Norte']);

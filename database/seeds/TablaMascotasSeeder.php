@@ -15,72 +15,47 @@ class TablaMascotasSeeder extends Seeder
      */
     public function run()
     {
-        
-     //   factory(Mascota::class,10)->create()->each(function($mascota) {
-     //   factory(Mascota::class,10)->create()->each(function($mascota) {
-          	//$mascota = factory(Mascota::class)->make();
-    //    	$mascota->save();
-    
-
-
         $mascota = factory(Mascota::class)->make();
-
 
         $perros = 0;
         $gatos = 0;
-        $otro = 0;
+        $otros = 0;
 
-        for($i = 0; $i < 20; $i++) {
+        for($i = 0; $i < 33; $i++) {
            $mascota = factory(Mascota::class)->make(); 
            $mascota->save();
         
-           //$carpeta = $mascota->tipo .'Default';
-           
-
            if($mascota->tipo == "perro"){
             $perros++;
            }elseif ($mascota->tipo == "gato"){
             $gatos++;
+           }elseif ($mascota->tipo == "otro"){
+            $otros++;
            }
 
             if($mascota->tipo == "gato"){
-                if ($gatos > 10){
-                    $nombre = $mascota->tipo . "Default.jpg"; 
+                if ($gatos > 9){
+                    $nombre = $mascota->tipo . "Default.svg"; 
                 } else{
                     $nombre = $mascota->tipo .$gatos.".jpg";
                 }
             }
 
-
             if($mascota->tipo == "perro"){
-                if ($perros > 10){
-                    $nombre = $mascota->tipo . "Default.jpg" ;
+                if ($perros > 9){
+                    $nombre = $mascota->tipo . "Default.svg" ;
                 } else{
                    $nombre = $mascota->tipo .$perros.".jpg";
                 }
             }
 
-
-
-            //$path = 'public/storage/mascotas/'. $carpeta .'/'.$nombre;
-          
-            //$foto = File::get($path);
-
-
-           // $nombre = "1".'.'.$foto->extension();
-          
-
-
-
-            //$nombre = $mascota->id.'.'.$foto->extension();
-            //$foto->storeAs('public/mascotas/fotos',$nombre);
-            //$mascota->foto = $nombre;
-
-
-
-           
-            //$foto->storeAs('public/mascotas/fotos',$nombre);
-//            $foto = storeAs('public/mAsascotas/fotos',$nombre);
+            if($mascota->tipo == "otro"){
+                if ($otros > 9){
+                    $nombre = $mascota->tipo . "Default.svg" ;
+                } else{
+                   $nombre = $mascota->tipo .$otros.".jpg";
+                }
+            }
 
             $mascota->foto = $nombre;
             $mascota->save();
