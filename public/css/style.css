@@ -757,3 +757,13 @@ img {vertical-align: middle;}
 li.page-item:nth-child(1) > span:nth-child(1) {
   	color:#ffffff;
 }
+
+.patitasFrase {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #4A72B0;
+
+}
