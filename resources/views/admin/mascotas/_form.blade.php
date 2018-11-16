@@ -13,22 +13,53 @@
   <input type="text" name="nombre" class="form-control" value="{{ old('nombre', $mascota->nombre) }}">
 </div>
 
-<div class="col-md-12 form-group">
+<div class="col-md-6 form-group">
   <label> Tipo </label>
-  <input type="text" name="tipo" class="form-control" value="{{ old('tipo', $mascota->tipo) }}">
+  <select name="tipo">
+    @foreach($mascota->tipos as $tip)
+      <option value="{{ $tip }}" 
+        @if($tip == old('tipo',$mascota->tipo))
+          selected
+        @endif
+        >{{ $tip}}</option>
+    @endforeach
+</select>
 </div>
+
 <div class="col-md-6 form-group">
   <label> Edad </label>
   <input type="integer" name="edad" class="form-control" value="{{ old('edad', $mascota->edad) }}">
 </div>
+
 <div class="col-md-6 form-group">
   <label> Tamaño </label>
-  <input type="text" name="tamanio" class="form-control" value="{{ old('tamanio', $mascota->tamanio) }}">
+  <select name="tamanio">
+    @foreach($mascota->tamanios as $tam)
+      <option value="{{ $tam }}" 
+        @if($tam == old('tamanio',$mascota->tamanio))
+          selected
+        @endif
+        >{{ $tam}}</option>
+    @endforeach
+</select>
 </div>
+
 <div class="col-md-6 form-group">
   <label> Sexo </label>
-  <input type="text" name="sexo" class="form-control" value="{{ old('sexo', $mascota->sexo) }}">
+  <select name="sexo">
+    @foreach($mascota->sexos as $sex)
+      <option value="{{ $sex }}" 
+        @if($sex == old('sexo',$mascota->sexo))
+          selected
+        @endif
+        >{{ $sex}}</option>
+    @endforeach
+</select>
 </div>
+
+
+
+
 <div class="col-md-6 form-group">
   <label> Zona </label>
   <input type="text" name="zona" class="form-control" value="{{ old('zona', $mascota->zona) }}">
