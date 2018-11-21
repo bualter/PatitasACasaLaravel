@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet">
+      <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet"> <!-- ionicons-->
   </head>
   <body>
   <div class="contenedor-general">
@@ -32,8 +33,8 @@
 
               @guest
 
-                <li><a href="/login">   <button class="dropbtn"> LOG IN </button></a></li>
-                <li><a href="/register"><button class="dropbtn2">REGISTRARME</button></a></li>
+                <li><a href="/login">   <button class="loginbtn"> INICIAR SESION </button></a></li>
+                <li><a href="/register"><button class="registerbtn">REGISTRARME</button></a></li>
               @else
 
 
@@ -41,7 +42,8 @@
                 <li>
                   <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        {{ Auth::user()->name }}
+                      {{ Auth::user()->name}} &nbsp
+                      <ion-icon name="paw"> </ion-icon>
                     </button>
                     <div id="myDropdown" class="dropdown-content">
 
@@ -213,6 +215,8 @@ function showSlides() {
     setTimeout(showSlides, 2300); // Change image every 2 seconds
 }
 </script>
+
+<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
 
   </body>
 </html>

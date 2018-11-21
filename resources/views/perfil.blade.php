@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet"> <!-- ionicons-->
   </head>
   <body>
   <div class="contenedor-general">
@@ -33,16 +34,8 @@
             <li><a href="/login">LOG IN</a></li>
           @else
             <li>
-              <button class="dropbtn2">
-                  <a href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        {{ __('Cerrar sesión') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
+              <button class="cerrarbtn">
+                    <a href="{{ url('/logout') }}"> Cerrar Sesion </a>
                 </button>
             </li>
           @endguest
@@ -72,7 +65,10 @@
      {{Auth::user()->email}}
    </div>
    <div class="mailUsuario">
-     Zona: {{Auth::user()->zonaPertenencia}}
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   </div>
+   <div class="mailUsuario">
+     Zona {{Auth::user()->zonaPertenencia}}
    </div>
 </div>
 
@@ -91,10 +87,10 @@
 <div class="userBtnsDiv">
 <div class="userBtns02">
 <div>
- <a href="/admin/mascotas" class="mascotasUsuario2"> MIS MASCOTAS EN ADOPCION <ion-icon name="paw"></ion-icon></a>
+ <a href="/admin/mascotas" class="mascotasUsuario2"> MIS MASCOTAS EN ADOPCION &nbsp <ion-icon name="paw"></ion-icon></a>
 </div>
 <div>
-<a href="/admin/mascotas/nuevo" class="mascotasUsuario"> SUBIR MASCOTAS <ion-icon name="add"></ion-icon> </a>
+<a href="/admin/mascotas/nuevo" class="mascotasUsuario"> SUBIR MASCOTAS &nbsp <ion-icon name="add"></ion-icon> </a>
 </div>
 <!--<div>
  <a href="/" class="mascotasUsuario"> BUSCAR MASCOTAS <ion-icon name="search"></ion-icon> </a>
@@ -162,6 +158,7 @@
   </footer>
 </div>
 -->
+<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
 <script>
 
 function myFunction() {
@@ -183,5 +180,8 @@ window.onclick = function(event) {
 }
 </script>
 </div>
+
+<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+
 </body>
 </html>

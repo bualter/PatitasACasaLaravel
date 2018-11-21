@@ -60,3 +60,4 @@ Route::get('/admin', 'adminUsuarios@listarTodos')->middleware('auth', 'role:admi
 
 Route::delete('/admin/usuarios/{usuario}/eliminar', 'adminUsuarios@eliminar')->name('eliminar-usuario');
 
+Route::get('/logout', 'Front@logout');

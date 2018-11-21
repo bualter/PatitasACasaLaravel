@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet"> <!-- ionicons-->
+
+<!--Header-->
   </head>
   <body>
     <section class ="mi-header">
@@ -36,7 +36,8 @@
                 <li>
                   <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        {{ Auth::user()->name }}
+                      {{ Auth::user()->name}} &nbsp
+                      <ion-icon name="paw"> </ion-icon>
                     </button>
                     <div id="myDropdown" class="dropdown-content">
 
@@ -45,99 +46,94 @@
                       </a>
                       <a
                       @auth
-                       href="{{ route('lista-mascotas') }}"> Mis mascotas
+                        href="{{ route('lista-mascotas') }}"> Mis mascotas
                       @endauth
                       </a>
-                      <a  href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Cerrar sesión') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
+                      <a href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                        {{ __('Cerrar sesión') }}
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                      </form>
                     </div>
                   </div>
                 </li>
-              @endguest
-            </ul>
-                          </div>
-                        </div>
-                      </div>
-          </nav>
-        </header>
-      </div>
-    </section>
-
-
-
-<!-- yield header-->
-
-<section class="mascotas">
-
-
-  <div>
-    <div id="mascotastitleDiv">
-    <div class="titulo-mascotas">
-      <h2> Otros animales en adopción </h2>
+                @endguest
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     </div>
-  </div>
-  </div>
+  </section>
+
+<!--FIN Header-->
+
+<!--Mostrar Otros-->
+  <section class="mascotas">
+    <div>
+      <div id="mascotastitleDiv">
+        <div class="titulo-mascotas">
+          <h2> Otros animales en adopción </h2>
+        </div>
+      </div>
+    </div>
 
       <div class="lista-mascotas">
-
         @foreach($otros as $mascota)
-
           <div class="mascota">
-
             <div id="imagenMascota">
-              @if($mascota->foto)
-            <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
-              @endif
+                @if($mascota->foto)
+                   <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
+                @endif
             </div>
-            <div class="nombreMascota">{{$mascota->nombre}}
-            @if($mascota->sexo=="M")
-              ♂
-            @else
-              ♀
-            @endif
+              <div class="nombreMascota">{{$mascota->nombre}}
+
+            </div>
+            <div class="datosMascota">
+              <div class="edadMascota"> Sexo:
+                @if($mascota->sexo=="M")
+                  Macho
+                @else
+                  Hembra
+                @endif
+              </div>
+              <div class="edadMascota"> Edad: {{$mascota->edad}} años </div>
+            </div>
+            <div class="datosMascota2">
+              <div class="edadMascota"> Tamaño: {{$mascota->tamanio}} </div>
+            </div>
+            <div class="descripcionMascota">
+                {{$mascota->descripcion}}
+            </div>
+            <div class="datosMascota2">
+              <div class="edadMascota"> Zona {{$mascota->zona}}  </div>
+            </div>
+            <div class="contactoMascota">
+            <!--  Contacto: {$mascota->duenio->name}}-->
+
+              <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top">   <button class="dropbtn3"> ¡Adoptar!   </button> </a>
+
+            </div>
+            <!--<li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>-->
           </div>
-          <div class="datosMascota">
-            <div class="edadMascota"> Edad: {{$mascota->edad}} </div>
-            <div class="edadMascota"> Tamaño: {{$mascota->tamanio}} </div>
-          </div>
-          <div class="descripcionMascota">
-              {{$mascota->descripcion}}
-          </div>
-          <div class="datosMascota2">
-            <div class="edadMascota"> Zona {{$mascota->zona}}  </div>
-          </div>
-          <div class="contactoMascota">
-          <!--  Contacto: {$mascota->duenio->name}}-->
-
-            <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top">   <button class="dropbtn3"> ¡Adoptar!   </button> </a>
-
-          </div>
-
-          </div>
-        @endforeach
-
-      </div>
-
-</section>
+      @endforeach
+    </div>
+  </section>
 
 
-<!-- yield footer-->
-
+<!-- Footer-->
 <div clas="mi-footer" id="mi-footer">
   <div class ="container-fluid">
     <footer class="main-footer" >
       <div class="container">
-
         <div class= "footer1">
-        <div class="patitasFrase">
-          ♥ Hacé de la adopción tu única opción ♥
-        </div>
+          <div class="patitasFrase">
+            ♥ Hacé de la adopción tu única opción ♥
+          </div>
 
 
 <!--        <div class="container" id="footer-icons">
@@ -146,36 +142,40 @@
           <a href= "https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter" class="twitter-icon"></ion-icon></a> twitter
         </div>-->
 
-        <div class="footer-last">
-          <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="250px" class="img-responsive">
+          <div class="footer-last">
+            <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="250px" class="img-responsive">
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </div>
-</div>
+<!--FIN Footer-->
+
 <!--USUARIO BOTON-->
-<script>
+  <script>
 
-function myFunction() {
-   document.getElementById("myDropdown").classList.toggle("show");
-}
+  function myFunction() {
+     document.getElementById("myDropdown").classList.toggle("show");
+  }
 
-window.onclick = function(event) {
- if (!event.target.matches('.dropbtn')) {
+  window.onclick = function(event) {
+   if (!event.target.matches('.dropbtn')) {
 
-   var dropdowns = document.getElementsByClassName("dropdown-content");
-   var i;
-   for (i = 0; i < dropdowns.length; i++) {
-     var openDropdown = dropdowns[i];
-     if (openDropdown.classList.contains('show')) {
-       openDropdown.classList.remove('show');
+     var dropdowns = document.getElementsByClassName("dropdown-content");
+     var i;
+     for (i = 0; i < dropdowns.length; i++) {
+       var openDropdown = dropdowns[i];
+       if (openDropdown.classList.contains('show')) {
+         openDropdown.classList.remove('show');
+       }
      }
    }
- }
-}
-</script>
+  }
+  </script>
+<!--FIN USUARIO BOTON-->
+<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
 
 
-</body>
+  </body>
 </html>
