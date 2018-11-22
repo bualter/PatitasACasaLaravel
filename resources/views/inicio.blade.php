@@ -21,14 +21,19 @@
               @endif
           </div>
             <div class="nombreMascota">{{$mascota->nombre}}
-            @if($mascota->sexo=="M")
-              ♂
-            @else
-              ♀
-            @endif
+
           </div>
           <div class="datosMascota">
-            <div class="edadMascota"> Edad: {{$mascota->edad}} </div>
+            <div class="edadMascota"> Sexo:
+              @if($mascota->sexo=="M")
+                Macho
+              @else
+                Hembra
+              @endif
+            </div>
+            <div class="edadMascota"> Edad: {{$mascota->edad}} años </div>
+          </div>
+          <div class="datosMascota2">
             <div class="edadMascota"> Tamaño: {{$mascota->tamanio}} </div>
           </div>
           <div class="descripcionMascota">

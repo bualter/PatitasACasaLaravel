@@ -15,5 +15,11 @@ class Front extends Controller
 		return view('inicio', compact('mascotas'));
 	}
 
+	public function logout () {
+	    //logout user
+	    auth()->logout();
+	    // redirect to homepage
+	    return redirect('/');
+	}
 
 }

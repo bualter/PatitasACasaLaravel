@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap:500i,600,600i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet"> <!-- ionicons-->
   </head>
   <body>
     <section class ="mi-header">
@@ -40,7 +41,8 @@
                 <li>
                   <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        {{ Auth::user()->name }}
+                      {{ Auth::user()->name}} &nbsp
+                      <ion-icon name="paw"> </ion-icon>
                     </button>
                     <div id="myDropdown" class="dropdown-content">
 
@@ -97,36 +99,40 @@
         @foreach($gatos as $mascota)
 
           <div class="mascota">
-
             <div id="imagenMascota">
-              @if($mascota->foto)
-            <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
-              @endif
+                @if($mascota->foto)
+                   <img src="/storage/mascotas/fotos/{{ $mascota->foto }}" >
+                @endif
             </div>
-            <div class="nombreMascota">{{$mascota->nombre}}
-            @if($mascota->sexo=="M")
-              ♂
-            @else
-              ♀
-            @endif
-          </div>
-          <div class="datosMascota">
-            <div class="edadMascota"> Edad: {{$mascota->edad}} </div>
-            <div class="edadMascota"> Tamaño: {{$mascota->tamanio}} </div>
-          </div>
-          <div class="descripcionMascota">
-              {{$mascota->descripcion}}
-          </div>
-          <div class="datosMascota2">
-            <div class="edadMascota"> Zona {{$mascota->zona}}  </div>
-          </div>
-          <div class="contactoMascota">
-          <!--  Contacto: {$mascota->duenio->name}}-->
+              <div class="nombreMascota">{{$mascota->nombre}}
 
-            <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top">   <button class="dropbtn3"> ¡Adoptar!   </button> </a>
+            </div>
+            <div class="datosMascota">
+              <div class="edadMascota"> Sexo:
+                @if($mascota->sexo=="M")
+                  Macho
+                @else
+                  Hembra
+                @endif
+              </div>
+              <div class="edadMascota"> Edad: {{$mascota->edad}} años </div>
+            </div>
+            <div class="datosMascota2">
+              <div class="edadMascota"> Tamaño: {{$mascota->tamanio}} </div>
+            </div>
+            <div class="descripcionMascota">
+                {{$mascota->descripcion}}
+            </div>
+            <div class="datosMascota2">
+              <div class="edadMascota"> Zona {{$mascota->zona}}  </div>
+            </div>
+            <div class="contactoMascota">
+            <!--  Contacto: {$mascota->duenio->name}}-->
 
-          </div>
+              <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top">   <button class="dropbtn3"> ¡Adoptar!   </button> </a>
 
+            </div>
+            <!--<li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>-->
           </div>
         @endforeach
 
@@ -183,6 +189,9 @@ window.onclick = function(event) {
  }
 }
 </script>
+
+<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+
 
 
 </body>
