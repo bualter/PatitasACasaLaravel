@@ -69,18 +69,6 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -110,6 +98,14 @@
                                 </button>
                             </div>
                         </div>
+
+                        <form>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <a href="{{ url('/login/facebook') }}" class="btn btn-facebook"> Facebook</a>
+                                </div>
+                            </div>
+                        </form>
                     </form>
                 </div>
             </div>

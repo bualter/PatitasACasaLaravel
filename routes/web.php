@@ -60,3 +60,5 @@ Route::get('/admin', 'adminUsuarios@listarTodos')->middleware('auth', 'role:admi
 
 Route::delete('/admin/usuarios/{usuario}/eliminar', 'adminUsuarios@eliminar')->name('eliminar-usuario');
 
+Route::get('login/{provider}', 'SocialController@redirect');
+Route::get('login/{provider}/callback','SocialController@Callback');

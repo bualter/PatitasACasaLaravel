@@ -21,6 +21,9 @@ class UserTableSeeder extends Seeder
         $user->name = 'User';
         $user->email = 'user@example.com';
         $user->lastname = 'User';
+        $user->avatar = '';
+        $user->provider = '';
+        $user->provider_id = '';
         $user->zonaPertenencia = 'Palermo';
         $user->password = bcrypt('secret');
  		$user->save();
@@ -30,6 +33,9 @@ class UserTableSeeder extends Seeder
         $user->name = 'Jose';
         $user->email = 'jose_herrera97@icloud.com';
         $user->lastname =  'Herrera';
+        $user->avatar = '';
+        $user->provider = '';
+        $user->provider_id = '';
         $user->zonaPertenencia = 'Palermo';
         $user->password = bcrypt('root');
         $user->save();
@@ -38,6 +44,9 @@ class UserTableSeeder extends Seeder
         $user = new User();
         $user->name = 'Admin';
         $user->lastname = 'Admin';
+        $user->avatar = '';
+        $user->provider = '';
+        $user->provider_id = '';
         $user->zonaPertenencia = 'Palermo';
         $user->email = 'admin@example.com';
         $user->password = bcrypt('secret');
