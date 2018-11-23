@@ -14,7 +14,9 @@
       <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet"> <!-- ionicons-->
   </head>
   <body>
+    <div class="default">
   <div class="contenedor-general">
+
 
 
     <section class ="mi-header">
@@ -145,31 +147,30 @@
 
   @yield('mascotasSubidas')
 
-  <div clas="mi-footer" id="mi-footer">
-    <div class ="container-fluid">
-      <footer class="main-footer" >
-        <div class="container">
-
-          <div class= "footer1">
-          <div class="patitasFrase">
-            ♥ Hacé de la adopción tu única opción ♥
-          </div>
-
-
-  <!--        <div class="container" id="footer-icons">
-            <a href= "https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" class="fb-icon"></ion-icon></a> fb
-            <a href= "https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram" class="insta-icon"></ion-icon></a> insta
-            <a href= "https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter" class="twitter-icon"></ion-icon></a> twitter
-          </div>-->
-
-          <div class="footer-last">
-            <img src="storage/front/logo.png" alt="Logotipo" class="logo" width="250px" class="img-responsive">
-          </div>
-        </div>
+  <div class="todo-footer" id="todo-footer">
+    <footer class="main-footer">
+      <div class="mi-footer" id="mi-footer">
+      <div class="footerLogo">
+          Patitas a Casa
       </div>
+      <div class="container" id="footer-icons">
+        <a href= "https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" id="fb-icon"></ion-icon></a>
+        <a href= "https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram" id="insta-icon"></ion-icon></a>
+        <a href= "https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter" id="twitter-icon"></ion-icon></a>
+      </div>
+      <div class="footer-contacto">
+                <p> 4703-1515
+                  <br>
+                  info@patitasacasa.com.ar
+                </p>
+              </div>
+      </div>
+      <!-- <div class="patitasFrase">
+        ♥ Hacé de la adopción tu única opción ♥
+      </div> -->
     </footer>
   </div>
-  </div>
+
 
  <!--USUARIO BOTON-->
 <script>
@@ -217,6 +218,7 @@ function showSlides() {
 </script>
 
 <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+
 
   </body>
 </html>

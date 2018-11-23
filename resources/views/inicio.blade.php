@@ -55,7 +55,9 @@
       @endforeach
 
     </div>
-    {{$mascotas->links()}}
+    <div class="paginador">
+      {{$mascotas->links()}}
+    </div>
   </section>
 
 @endsection
