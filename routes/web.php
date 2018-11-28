@@ -60,9 +60,8 @@ Route::get('/admin', 'adminUsuarios@listarTodos')->middleware('auth', 'role:admi
 
 Route::delete('/admin/usuarios/{usuario}/eliminar', 'adminUsuarios@eliminar')->name('eliminar-usuario');
 
-<<<<<<< HEAD
+
 Route::get('login/{provider}', 'SocialController@redirect');
 Route::get('login/{provider}/callback','SocialController@Callback');
-=======
+
 Route::get('/logout', 'Front@logout');
->>>>>>> 37fd74fea677e149192d5cf0df51d5553dbab43f

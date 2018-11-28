@@ -22,4 +22,10 @@ class Front extends Controller
 	    return redirect('/');
 	}
 
+	public function verMascota($id)
+	{
+		$mascota = Mascota::where('id','$id')->get();
+		return view('mascota', compact('mascota'));
+	}
+
 }
