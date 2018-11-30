@@ -60,6 +60,13 @@ Route::get('/admin', 'adminUsuarios@listarTodos')->middleware('auth', 'role:admi
 
 Route::delete('/admin/usuarios/{usuario}/eliminar', 'adminUsuarios@eliminar')->name('eliminar-usuario');
 
+<<<<<<< HEAD
 Route::get('login/{provider}', 'SocialController@redirect');
 Route::get('login/{provider}/callback','SocialController@Callback');
+=======
+
+Route::get('login/{provider}', 'SocialController@redirect');
+Route::get('login/{provider}/callback','SocialController@Callback');
+
+>>>>>>> 076f0464dc7e1d8947540aa776c861fd85ce5613
 Route::get('/logout', 'Front@logout');
