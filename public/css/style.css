@@ -928,3 +928,58 @@ li.page-item:nth-child(1) > span:nth-child(1) {
   /*-webkit-transform: rotate(360deg);
           transform: rotate(360deg);*/
 }
+
+.contactoMascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnVer {
+  background-color: #eba23f;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  padding: 6px;
+  border-radius: 50px;
+  border-style: hidden;
+  width: 150px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 1px;
+  transition-property: background-color;
+  transition-duration: 600ms;
+}
+
+.btnVer:hover {
+  background-color: #ebcf3f;
+}
+
+.btnAdoptar {
+  background-color: #eba23f;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 50px;
+  border-style: hidden;
+  cursor: pointer;
+  width: 150px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 1px;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  display: none;
+}
+
+.btnAdoptar:hover {
+  background-color: #e64d48;
+}
