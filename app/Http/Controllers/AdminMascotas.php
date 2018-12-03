@@ -134,8 +134,8 @@ class AdminMascotas extends Controller
 
   public function verMascota($id)
   {
-    $mascota = Mascota::where('id','$id')->get();
-    return view('mascota')->with(compact('mascota'));
+    $mascota = Mascota::where('id',$id)->first();
+    return view('mascota', compact('mascota'));
   }
 
   public function verPerfil()

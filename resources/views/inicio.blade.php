@@ -43,9 +43,11 @@
             <div class="edadMascota"> Zona {{$mascota->zona}}  </div>
           </div>
           <div class="contactoMascota">
-          <a href="{{route('ver-mascota', compact('mascota'))}}" class="btnVer">Ver mas</>
 
-            <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top">   <button class="btnAdoptar"> ¡Adoptar!   </button> </a>
+          <a href="{{route('ver-mascota', compact('mascota'))}}" class="btnVer">Ver mas</> </a>
+
+
+
 
           </div>
 

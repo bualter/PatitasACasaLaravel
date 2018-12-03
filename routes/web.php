@@ -32,7 +32,9 @@ Route::put('/admin/mascotas/{mascota}/editar', 'AdminMascotas@guardar');
 Route::delete('/admin/mascotas/{mascota}/eliminar', 'AdminMascotas@eliminar')->name('eliminar-mascota');
 
 Route::get('/', 'Front@home')->name('inicio');;
-Route::get('/mascotas/{mascota}', 'Front@verMascota')->name('ver-mascota');
+
+Route::get('/mascotas/{mascota}', 'AdminMascotas@verMascota')->name('ver-mascota');
+//Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
 
 Route::get('/mascotas-todas', 'AdminMascotas@listarTodas');
 Route::get('/perros', 'AdminMascotas@listarPerros');
@@ -43,7 +45,6 @@ Route::get('/preguntas', function () {
     return view('preguntasFrecuentes');
 });
 
-Route::get('/mascota/{id}', 'AdminMascotas@verMascota');
 
 Route::get('/perfil', 'AdminMascotas@verPerfil');
 
@@ -59,7 +60,6 @@ Route::get('/header', function () {
 Route::get('/admin', 'adminUsuarios@listarTodos')->middleware('auth', 'role:admin')->name('lista-usuarios');;
 
 Route::delete('/admin/usuarios/{usuario}/eliminar', 'adminUsuarios@eliminar')->name('eliminar-usuario');
-
 
 Route::get('login/{provider}', 'SocialController@redirect');
 Route::get('login/{provider}/callback','SocialController@Callback');
