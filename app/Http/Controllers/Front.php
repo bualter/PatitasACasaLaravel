@@ -24,7 +24,7 @@ class Front extends Controller
 
 	public function verMascota($id)
 	{
-		$mascota = Mascota::where('id','$id')->get();
+		$mascota = Mascota::where('id',$id)->first();
 		return view('mascota', compact('mascota'));
 	}
 
