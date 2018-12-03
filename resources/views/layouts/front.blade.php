@@ -147,6 +147,10 @@
 
   @yield('mascotasSubidas')
 
+  <br>
+  <a target="_blank" href="https://wa.me/5491140453726"><img src="storage/front/whatsapp.png" alt="whatsapp" class="whatsapp" width="70px" class="img-responsive"></a>
+  <br>
+
   <div class="todo-footer" id="todo-footer">
     <footer class="main-footer">
       <div class="mi-footer" id="mi-footer">

@@ -172,7 +172,7 @@ html, body {
    width: 150px;
    font-weight: 600;
    transition-property: background-color;
-   transition-duration: 600ms;
+   transition-duration: 700ms;
 }
 
 .loginbtn:hover {
@@ -193,7 +193,7 @@ html, body {
   width: 150px;
   font-weight: 600;
   transition-property: background-color;
-  transition-duration: 600ms;
+  transition-duration: 300ms;
 }
 
 .registerbtn:hover {
@@ -982,4 +982,12 @@ li.page-item:nth-child(1) > span:nth-child(1) {
 
 .btnAdoptar:hover {
   background-color: #e64d48;
+}
+
+.whatsapp {
+  color: rgb(13, 187, 51);
+  font-size: 2em;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }

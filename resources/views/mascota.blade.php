@@ -42,7 +42,7 @@
               <div class="contactoMascota">
               <!--  Contacto: {$mascota->duenio->name}}-->
 
-                <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top">   <button class="dropbtn3"> ¡Adoptar!   </button> </a>
+                <a href="mailto:{{$mascota->duenio->email}}?Subject=Contacto%20Patitas" target="_top"> <button class="dropbtn3"> ¡Adoptar!   </button> </a>
 
               </div>
               <!--<li><a href="/mascota/{{$mascota->id}}">ver mascota</a></li>-->
@@ -53,4 +53,3 @@
       </section>
 
 @endsection
-
