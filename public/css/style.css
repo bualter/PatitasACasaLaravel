@@ -828,7 +828,7 @@ img {vertical-align: middle;}
 
 .pagination {
 	text-align:center;
-  margin-top:20px;
+  margin-top: 40px;
   background-color: #ffffff;
   width: 200px;
   border-radius: 50px;
@@ -899,9 +899,13 @@ li.page-item:nth-child(1) > span:nth-child(1) {
   width: 300px;
 }
 
+.footer-contacto p {
+  font-size: 0.9em;
+}
+
 #footer-icons {
   color: #4A72B0;
-  font-size: 2.6em;
+  font-size: 2.3em;
   margin-top: 15px;
   padding-bottom: 10px;
 
@@ -985,9 +989,41 @@ li.page-item:nth-child(1) > span:nth-child(1) {
 }
 
 .whatsapp {
-  color: rgb(13, 187, 51);
-  font-size: 2em;
+  background-color: #329a75;
+  color: #ffffff;
+  font-size: 1em;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  left: 15px;
+  border-radius: 50px;
+  /*box-shadow: 0 1px 4px #3c3c3c;*/
+  width: 60px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #5381c9; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    width: 40px;
+    height: 40px;
+    /*display:flex;*/
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 200ms;
+    /*box-shadow: 0 1px 4px #3c3c3c;*/
+}
+
+#myBtn:hover {
+    background-color: #5a8ee0; /* Add a dark-grey background on hover */
 }

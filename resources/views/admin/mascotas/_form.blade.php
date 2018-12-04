@@ -17,7 +17,7 @@
   <label> Tipo </label>
   <select name="tipo">
     @foreach($mascota->tipos as $tip)
-      <option value="{{ $tip }}" 
+      <option value="{{ $tip }}"
         @if($tip == old('tipo',$mascota->tipo))
           selected
         @endif
@@ -35,7 +35,7 @@
   <label> Tamaño </label>
   <select name="tamanio">
     @foreach($mascota->tamanios as $tam)
-      <option value="{{ $tam }}" 
+      <option value="{{ $tam }}"
         @if($tam == old('tamanio',$mascota->tamanio))
           selected
         @endif
@@ -48,7 +48,7 @@
   <label> Sexo </label>
   <select name="sexo">
     @foreach($mascota->sexos as $sex)
-      <option value="{{ $sex }}" 
+      <option value="{{ $sex }}"
         @if($sex == old('sexo',$mascota->sexo))
           selected
         @endif
@@ -79,5 +79,4 @@
 
 <div class="col-md-12 form-group">
   <button type="submit" class="btn btn-primary">Publicar</button>
-  <a href="{{route('lista-mascotas')}}" class="btn btn-info">Volver al perfil</a>
 </div>

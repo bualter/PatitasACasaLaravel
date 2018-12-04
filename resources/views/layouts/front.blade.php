@@ -147,15 +147,15 @@
 
   @yield('mascotasSubidas')
 
-  <br>
+
   <a target="_blank" href="https://wa.me/5491140453726"><img src="storage/front/whatsapp.png" alt="whatsapp" class="whatsapp" width="70px" class="img-responsive"></a>
-  <br>
+
 
   <div class="todo-footer" id="todo-footer">
     <footer class="main-footer">
       <div class="mi-footer" id="mi-footer">
       <div class="footerLogo">
-          Patitas a Casa
+          <img src="storage/front/logo3.png" alt="Logotipo" class="logo" width="230px" class="img-responsive">
       </div>
       <div class="container" id="footer-icons">
         <a href= "https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook" id="fb-icon"></ion-icon></a>
@@ -173,10 +173,32 @@
         ♥ Hacé de la adopción tu única opción ♥
       </div> -->
     </footer>
+
+
+                <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon name="arrow-round-up"></ion-icon></button>
+
   </div>
 
 
  <!--USUARIO BOTON-->
+ <script>
+
+ window.onscroll = function() {scrollFunction()};
+
+ function scrollFunction() {
+     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+         document.getElementById("myBtn").style.display = "flex";
+     } else {
+         document.getElementById("myBtn").style.display = "none";
+     }
+ }
+
+ function topFunction() {
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
+ }
+ </script>
+
 <script>
 
 function myFunction() {

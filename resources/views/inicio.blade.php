@@ -44,7 +44,7 @@
           </div>
           <div class="contactoMascota">
 
-          <a href="{{route('ver-mascota', compact('mascota'))}}" class="btnVer">Ver mas</> </a>
+          <a target="_blank" href="{{route('ver-mascota', compact('mascota'))}}" class="btnVer"> Ver mas</> </a>
 
 
 
